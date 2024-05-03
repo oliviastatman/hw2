@@ -167,27 +167,9 @@ new_role1["movie_id"] = new_movie1["id"]
 new_role1["actor_id"] = new_actor1["id"]
 new_role1.save
 
-new_role1 = Role.new
-new_role1["character_name"] = "Bruce Wayne"
-new_role1["movie_id"] = new_movie2["id"]
-new_role1["actor_id"] = new_actor1["id"]
-new_role1.save
-
-new_role1 = Role.new
-new_role1["character_name"] = "Bruce Wayne"
-new_role1["movie_id"] = new_movie3["id"]
-new_role1["actor_id"] = new_actor1["id"]
-new_role1.save
-
 new_role2 = Role.new
 new_role2["character_name"] = "Alfred"
 new_role2["movie_id"] = new_movie1["id"]
-new_role2["actor_id"] = new_actor2["id"]
-new_role2.save
-
-new_role2 = Role.new
-new_role2["character_name"] = "Alfred"
-new_role2["movie_id"] = new_movie2["id"]
 new_role2["actor_id"] = new_actor2["id"]
 new_role2.save
 
@@ -197,23 +179,29 @@ new_role3["movie_id"] = new_movie1["id"]
 new_role3["actor_id"] = new_actor3["id"]
 new_role3.save
 
-new_role4 = Role.new
-new_role4["character_name"] = "Rachel Dawes"
-new_role4["movie_id"] = new_movie1["id"]
-new_role4["actor_id"] = new_actor4["id"]
-new_role4.save
-
 new_role5 = Role.new
 new_role5["character_name"] = "Commissioner Gordon"
 new_role5["movie_id"] = new_movie1["id"]
 new_role5["actor_id"] = new_actor5["id"]
 new_role5.save
 
-new_role5 = Role.new
-new_role5["character_name"] = "Commissioner Gordon"
-new_role5["movie_id"] = new_movie3["id"]
-new_role5["actor_id"] = new_actor5["id"]
-new_role5.save
+new_role4 = Role.new
+new_role4["character_name"] = "Rachel Dawes"
+new_role4["movie_id"] = new_movie1["id"]
+new_role4["actor_id"] = new_actor4["id"]
+new_role4.save
+
+new_role1 = Role.new
+new_role1["character_name"] = "Bruce Wayne"
+new_role1["movie_id"] = new_movie2["id"]
+new_role1["actor_id"] = new_actor1["id"]
+new_role1.save
+
+new_role2 = Role.new
+new_role2["character_name"] = "Alfred"
+new_role2["movie_id"] = new_movie2["id"]
+new_role2["actor_id"] = new_actor2["id"]
+new_role2.save
 
 new_role6 = Role.new
 new_role6["character_name"] = "Joker"
@@ -232,6 +220,18 @@ new_role8["character_name"] = "Rachel Dawes"
 new_role8["movie_id"] = new_movie2["id"]
 new_role8["actor_id"] = new_actor8["id"]
 new_role8.save
+
+new_role1 = Role.new
+new_role1["character_name"] = "Bruce Wayne"
+new_role1["movie_id"] = new_movie3["id"]
+new_role1["actor_id"] = new_actor1["id"]
+new_role1.save
+
+new_role5 = Role.new
+new_role5["character_name"] = "Commissioner Gordon"
+new_role5["movie_id"] = new_movie3["id"]
+new_role5["actor_id"] = new_actor5["id"]
+new_role5.save
 
 new_role9 = Role.new
 new_role9["character_name"] = "Bane"
@@ -279,6 +279,7 @@ puts ""
 # TODO!
 
 all_roles = Role.all
+
 for role in all_roles
     selected_movie = Movie.where({"id" => role["movie_id"]})
     for movie in selected_movie
